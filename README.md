@@ -102,6 +102,7 @@ pm2 save
 2️⃣	Nginx Config File	/etc/nginx/sites-available/default
 3️⃣	App on Port 80	After proxy setup
 4️⃣ App on Port 3000
+
 🧰 Folder Structure
 
 nodejs-app/
@@ -111,15 +112,24 @@ nodejs-app/
 ├── Images
 └── README.md
 
+🔄 Architecture Diagram (Flow)
+[ User ] 
+   ↓ HTTP (Port 80)
+[ Nginx Reverse Proxy ]
+   ↓ forwards to
+[ Node.js App (Port 3000) ]
+   ↓
+[ Response Sent Back to User ]
+
 🏁 Final Result
-✅ Node.js app runs at:
-http://<EC2-Public-IP>
 
-✅ Traffic flows through:
-Nginx → localhost:3000 → Node.js
+✅ Node.js app hosted on AWS EC2
+✅ Accessible via HTTP (Port 80)
+✅ Managed by Nginx reverse proxy
+✅ Persistent with PM2
 
-✅ Managed with:
-PM2 (auto-start on reboot)
+URL Example:
+👉 http://<EC2-Public-IP>
 
 🧑‍💻 Author
 Prasad
