@@ -124,6 +124,8 @@ nodejs-app/
 | App on Port 3000  | Before Nginx proxy setup            |
 | App on Port 80    | After Nginx proxy setup   
 
+💡 **Tip:** Place all your screenshots inside a `Images` folder in your repo for clean structure.
+
 ## 🔄 Architecture Diagram:-
 
 [ User ]
