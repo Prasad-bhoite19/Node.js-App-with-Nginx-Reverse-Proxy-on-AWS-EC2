@@ -80,7 +80,7 @@ sudo nano index.js
 ```
 node index.js
 ```
-- ***Visit: http://<EC2-Public-IP>:3000***
+- ***Visit: http://`<EC2-Public-IP>`:3000***
 
 ### 8️⃣ Install and Configure Nginx:-
 ```
@@ -96,7 +96,7 @@ sudo nano /etc/nginx/sites-available/default
 sudo nginx -t
 sudo systemctl restart nginx
 ```
-***Visit http://<EC2-Public-IP> to see your app running via Nginx on port 80.***
+- ***Visit http://`<EC2-Public-IP>` to see your app running via Nginx on port 80.***
 
 ### 🔟 Keep App Running After Logout (PM2):-
 ```
@@ -105,7 +105,7 @@ pm2 start index.js
 ```
 
 ## 🧰 Folder Structure:-
-
+```
 nodejs-app/
 ├── index.js
 
@@ -114,23 +114,30 @@ nodejs-app/
 ├── README.md
 
 └── Images (screenshots)
-
+```
 ## 📸 Screenshots:-
 
-- Screenshot	Description
-- EC2 Dashboard	Instance running details
-- Nginx Config	/etc/nginx/sites-available/default
-- App on Port 3000	Before Nginx proxy setup
-- App on Port 80	After Nginx proxy setup
+| Screenshot        | Description                         |
+|------------------|-------------------------------------|
+| EC2 Dashboard     | Instance running details            |
+| Nginx Config      | /etc/nginx/sites-available/default |
+| App on Port 3000  | Before Nginx proxy setup            |
+| App on Port 80    | After Nginx proxy setup   
 
 ## 🔄 Architecture Diagram:-
 
 [ User ]
+
    ↓ HTTP (Port 80)
+   
 [ Nginx Reverse Proxy ]
+
    ↓ forwards to
+   
 [ Node.js App (Port 3000) ]
+
    ↓ Response sent back
+   
 [ User ]
 
 
@@ -163,7 +170,7 @@ nodejs-app/
 - ✅ Managed by Nginx reverse proxy
 - ✅ Persistent with PM2
 
-Example URL: http://<EC2-Public-IP>
+Example URL: http://`<EC2-Public-IP>`
 
 ## 👨‍💻 Author:-
 Prasad
