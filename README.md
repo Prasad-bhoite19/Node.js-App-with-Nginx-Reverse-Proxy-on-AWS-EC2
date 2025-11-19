@@ -6,7 +6,7 @@
 **Tech Stack:** Node.js + Express + Nginx + PM2  
 
 ---
-## 🌐 Overview:-
+##  🌐 Overview:-
 
 This guide demonstrates how to deploy a **Node.js application** on an **AWS EC2 Ubuntu instance** and use **Nginx as a reverse proxy** to forward traffic from **port 80** to your Node.js app running on **port 3000**.  
 
