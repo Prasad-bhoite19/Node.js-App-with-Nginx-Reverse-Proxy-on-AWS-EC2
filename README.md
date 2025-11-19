@@ -38,7 +38,7 @@ This setup ensures:-
 
 ---
 
-## 🪜 Deployment Steps
+## 🪜 Deployment Steps:-
 
 ### 1️⃣ Launch EC2 Instance:-
 
@@ -79,22 +79,25 @@ sudo nano index.js
 ### 7️⃣ Test the app:-
 ```
 node index.js
-Visit: http://<EC2-Public-IP>:3000
 ```
+***Visit: http://<EC2-Public-IP>:3000***
+
 ### 8️⃣ Install and Configure Nginx:-
 ```
 sudo apt install -y nginx
 sudo systemctl enable nginx
 sudo systemctl start nginx
 sudo nano /etc/nginx/sites-available/default
-Edit In Configure File:
 ```
+***Edit In Configure File:***
+
 ### 9️⃣ Test and restart:-
 ```
 sudo nginx -t
 sudo systemctl restart nginx
-Visit http://<EC2-Public-IP> to see your app running via Nginx on port 80.
 ```
+***Visit http://<EC2-Public-IP> to see your app running via Nginx on port 80.***
+
 ### 🔟 Keep App Running After Logout (PM2):-
 ```
 sudo npm install -g pm2
