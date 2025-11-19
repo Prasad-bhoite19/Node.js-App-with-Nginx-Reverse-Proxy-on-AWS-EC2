@@ -80,7 +80,7 @@ sudo nano index.js
 ```
 node index.js
 ```
-***Visit: http://<EC2-Public-IP>:3000***
+- ***Visit: http://<EC2-Public-IP>:3000***
 
 ### 8️⃣ Install and Configure Nginx:-
 ```
@@ -89,7 +89,7 @@ sudo systemctl enable nginx
 sudo systemctl start nginx
 sudo nano /etc/nginx/sites-available/default
 ```
-***Edit In Configure File:***
+- ***Edit In Configure File:***
 
 ### 9️⃣ Test and restart:-
 ```
@@ -108,8 +108,11 @@ pm2 start index.js
 
 nodejs-app/
 ├── index.js
+
 ├── package.json
+
 ├── README.md
+
 └── Images (screenshots)
 
 ## 📸 Screenshots:-
